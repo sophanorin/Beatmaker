@@ -1,132 +1,127 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body
-{
-    font-family: sans-serif;
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
-i,svg
-{
-    pointer-events: none;
+i,
+svg {
+  pointer-events: none;
 }
-.kick-pad,.snare-pad,.hihat-pad 
-{
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem 0.5rem;
-    cursor:pointer;
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
 }
-.kick-pad{
-    background:rgb(19, 212, 238);
+.kick-pad {
+  background: rgb(19, 212, 238);
 }
-.snare-pad{
-    background:rgb(255, 7, 243);
+.snare-pad {
+  background: rgb(255, 7, 243);
 }
-.hihat-pad{
-    background:rgb(9, 243, 21);
+.hihat-pad {
+  background: rgb(9, 243, 21);
 }
-.kick-pad.active{
-    background:rgb(6, 158, 179);
+.kick-pad.active {
+  background: rgb(6, 158, 179);
 }
-.snare-pad.active{
-    background:rgb(185, 9, 177);
+.snare-pad.active {
+  background: rgb(185, 9, 177);
 }
-.hihat-pad.active{
-    background:rgb(5, 155, 12);
-}
-
-.sequencer
-{
-    display:flex;
-    min-width:100vw;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.hihat-pad.active {
+  background: rgb(5, 155, 12);
 }
 
-.kick-track,.snare-track,.hihat-track
-{
-    display:flex;
-    align-items: center;
-    width: 90rem;
-    justify-content:space-between;
-    margin-top: 5rem;
-}
-.kick,.snare,.hihat
-{
-    display: flex;
-}
-.controls
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex:1;
-    margin: 0 2rem;
-}
-.controls button{
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    background:rgb(88, 88, 88);
-    font-size: 1rem;
-    color: white;
-    transition: all 0.5s ease;
-}
-.pad
-{
-    transition: all 0.5s ease;
-}
-.play
-{
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    background:rgb(88, 88,88);
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 3rem;
-}
-select{
-    padding: 1rem;
-    font-size: 1rem;
-    margin-left: 1rem;
+.sequencer {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.mute.active{
-    background:rgb(189, 6, 6);
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 90rem;
+  justify-content: space-between;
+  margin-top: 5rem;
 }
-.tempo
-{
-    margin: 3rem;
-    width: 30%;
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+}
+.controls button {
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  background: rgb(88, 88, 88);
+  font-size: 1rem;
+  color: white;
+  transition: all 0.5s ease;
+}
+.pad {
+  transition: all 0.5s ease;
+}
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.mute.active {
+  background: rgb(189, 6, 6);
+}
+.tempo {
+  margin: 3rem;
+  width: 30%;
 }
 .tempo-slider {
-    padding: 0.2rem;
-    -webkit-appearance: none;
-    margin: 1rem 0rem;
-    width: 100%;
-    position: relative;
-    background:rgb(88,88,88);
-    cursor: pointer;
-    border-radius:1rem;
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: rgb(88, 88, 88);
+  cursor: pointer;
+  border-radius: 1rem;
 }
-.tempo p 
-{
-    font-size: 1.5rem;
-    margin: 2rem;
-    text-align: center;
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
 }
 @keyframes playTrack {
-    from
-    {
-        transform: scale(1);
-    }
-    to{
-        transform: scale(1.2);
-    }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }

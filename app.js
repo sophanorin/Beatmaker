@@ -42,6 +42,7 @@ class Drumkit {
   activePad() {
     this.classList.toggle("active");
   }
+
   start() {
     const interval = (60 / this.bpm) * 1000;
     if (!this.isPlaying) {
@@ -53,6 +54,7 @@ class Drumkit {
       this.isPlaying = null;
     }
   }
+
   updateButton() {
     if (!this.isPlaying) {
       this.playButton.innerText = "Stop";
